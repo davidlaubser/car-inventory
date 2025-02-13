@@ -1,0 +1,159 @@
+/* Global Variables */
+:root {
+  --primary-color: #000000f9;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --border-radius: 8px;
+  --padding: 20px;
+  --margin: 20px auto;
+  --max-width: 800px;
+  --shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h2,
+h3,
+h4 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.navbar-nav {
+  justify-content: right;
+  width: 100%;
+}
+
+.navbar-brand {
+  color: var(--background-color) !important;
+  font-size: 1.5rem !important;
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  color: var(--background-color);
+  margin: 0 2px;
+  border-radius: 0px;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  background-color: #1f1e1e;
+  color: var(--background-color);
+}
+
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:focus {
+  color: var(--background-color) !important;
+}
+
+/* Wrapper for Each Component */
+.my-component-wrapper {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--padding);
+  margin: var(--margin);
+  max-width: var(--max-width);
+}
+
+/* Component Titles */
+.component-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form .form-control {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--secondary-color);
+}
+
+form button {
+  align-self: flex-start;
+  border-radius: var(--border-radius);
+}
+
+/* Table Styling */
+.table {
+  margin-top: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.table tbody tr:hover {
+  background-color: var(--background-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Buttons */
+button,
+.btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Alerts */
+.alert {
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .my-component-wrapper {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .component-title {
+    font-size: 1.5rem;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+}
